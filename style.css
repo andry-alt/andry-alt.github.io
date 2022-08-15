@@ -1,0 +1,70 @@
+/*text area*/
+.caja{
+   position: relative;
+   left: 700px;
+   display: inline-block;
+   width: 300;
+   height: 600;
+}
+
+.ingresar{
+	position: absolute;
+	color: blue;
+	margin-top: -28;
+	font-size: 30px;
+	text-align: center;
+	right: 454;
+	height: 550px;
+	width: 450px;
+	border-radius: 18px;
+	border-color: black;
+
+}
+
+.text{
+	position: absolute;
+	left: -4;
+	color: blue;
+	margin-top: -28;
+	font-size: 30px;
+	text-align: center;
+	right: 560px;
+	height: 550px;
+	width: 450px;
+	border-radius: 18px;
+	border-color: black;
+	border-width: 2px;
+
+}
+
+.body{
+	background-color: lightblue;
+}
+/*Botones*/
+.button{
+	width: 200px;
+	position: relative;
+   left: -90;
+   top: -150;
+}
+.button1{
+	width: 200px;
+   position: relative;
+   left: -80;
+   top: -150;
+
+}
+.button2{
+	width: 200px;
+   position: relative;
+   left: 200;
+   top: -150;
+}
+
+.aviso{
+	width: 200px;
+   position: relative;
+   left: 112px;
+   top: -200;
+
+}

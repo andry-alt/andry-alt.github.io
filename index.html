@@ -1,0 +1,72 @@
+<meta charset="UTF-8"> 
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body class="body">
+<div position: relative; align="left", top: 0;><img src="logo.png" width="31.09px" height="48px" top = "-20px"></div>
+
+<div class="caja">
+
+      <input class = "ingresar" type="text" id="input-texto" placeholder="Ingrese el texto">
+      <textarea class="text" id="texto" placeholder="No hay texto encontrado "></textarea>
+
+</div>
+
+
+<br>
+<img class="aviso"src="aviso.png">
+<input class="button" type= image src="Button.png" onclick="botonEncriptar()" value="encriptar" id="boton-encriptar">
+<input class="button1" type= image src="Button2.png" onclick="botonDesencriptar()" value="desencriptar" id="boton-desencriptar">
+<input class="button2" type= image src="copiar.png" onclick="botonCopiar()" value = "copiar" id= "boton-copiar">
+
+
+</body>
+<script>
+    //llamando los textos 
+var inputIngresarTexto = document.getElementById("input-texto");
+var areaTexto = document.getElementById("texto");
+var areaTextoDes = document.getElementById("texto");
+var areaTextoCopiar = document.getElementById("input-texto");
+
+var btnEncriptar = document.getElementById("boton-encriptar");
+var btnDesencriptar = document.getElementById("boton-desencriptar");
+var btnCopiar = document.getElementById("boton-copiar");
+
+//boton para encriptar
+
+function botonEncriptar() {
+
+    const encriptar = inputIngresarTexto.value;
+    var encriptarTexto = encriptar.replace(/e/gi, "enter").replace(/i/gi,"imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+    
+   areaTexto.value = encriptarTexto;
+
+ }
+
+ //boton para desencriptar
+
+function botonDesencriptar(){
+    const desencriptar = inputIngresarTexto.value;
+    var desencriptarTexto = desencriptar.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+
+    areaTextoDes.value = desencriptarTexto;
+} 
+
+//boton para copiar
+
+function botonCopiar(){
+
+    const copiar = document.getElementById("texto");
+
+    copiar.select();
+
+    navigator.clipboard.writeText(copiar.value);
+
+    alert("Texto Copiado.")
+    
+}
+
+
+btnEncriptar.onclick = botonEncriptar;
+btnDesencriptar.onclick = botonDesencriptar;
+
+</script>
